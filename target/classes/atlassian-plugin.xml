@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="com.capgemini.hyc.feat-link" name="feat-link" plugins-version="2">
+  <plugin-info>
+    <description>This is the com.capgemini.hyc:feat-link plugin for Atlassian JIRA.</description>
+    <version>1.0</version>
+    <vendor name="Example Company" url="http://www.example.com/"/>
+  </plugin-info>
+  <resource type="i18n" name="i18n" location="com.capgemini.hyc.feat-link"/>
+  <report name="Linked Issues" i18n-name-key="linked-issues.name" key="linked-issues" class="com.capgemini.hyc.jira.reports.LinkedIssues">
+    <description key="linked-issues.description">The Linked Issues Plugin</description>
+    <resource name="html-view" type="velocity" location="html-view.vm"/>
+    <resource name="excel-view" type="velocity" location="teplates.excel-view.vm"/>
+    <resource name="i18n" type="i18n" location="LinkedIssues"/>
+    <label key="linked-issues.label"></label>
+    <!-- the properties of this report which the user must select before running it -->
+    <!-- Uncomment and edit properties...-->
+    <properties>
+        <property>
+            <key>featID</key>
+            <name>link.featID.name</name>
+            <description>link.featID.description</description>
+            <type>string</type>
+        </property>
+    </properties>
+    
+  </report>
+</atlassian-plugin>
