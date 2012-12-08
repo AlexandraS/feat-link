@@ -10,6 +10,7 @@ import com.atlassian.jira.util.ParameterUtils;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 /**
  * 
@@ -33,41 +34,47 @@ public class LinkedIssues extends AbstractReport {
 	/**
 	 * Diese Methode generiert die html-Ausgabe
 	 */
-    public String generateReportHtml(ProjectActionSupport action, Map map) throws Exception {
-       
-    	return getLinkedIssues(action,map).toString();
+    @SuppressWarnings("unchecked")
+	public String generateReportHtml(ProjectActionSupport action, Map map) throws Exception {
+      
+    	//return getLinkedIssues(action, map).toString();
     	//die folgende Zeile bitte entkommentieren, um die html-view zu nutzen, und die obere Zeile löschen, oder auskommentieren
-    	//return descriptor.getHtml("html-view", getLinkedIssues(action,map));
+    	return descriptor.getHtml("html-view", getLinkedIssues(action,map));
     }
     /**
      * 
      * @param action
      * @param map
-     * @return Eine Map, die die Linked Issues zur eingegebenen ID enthalten
+     * @return Die Methode gibt eine Map, die die Linked Issues zur eingegebenen ID enthält zurück
      */
-    public Map getLinkedIssues(ProjectActionSupport action, Map map){
+	public Map getLinkedIssues(ProjectActionSupport action, Map map){
     	
     	LinkCollection linkCollection = linkManager.getLinkCollection(getIssue(action, map), action.getLoggedInUser());
     	Collection<Issue> linkIssues = linkCollection.getAllIssues();
     	linkCollection.getInwardIssues(getIssue(action, map).getKey());
-    	Object[] issues = linkIssues.toArray();
-    	Map<Integer, String> linked = new HashMap();
+    	//Object[] issues = linkIssues.toArray();
+    	//List<Issue> linked = null;
+    	//linked.addAll(linkIssues);
     	/**
     	 * In dieser Schleife wird die linked Map mit den Keys der gelinkten Issues gefüllt
     	 */
-    		for (int i=0; i< issues.length; i++){    		
-    			linked.put(i, issues[i].toString());
-    		}
-    	Map<String, Issue> issueMap = new HashMap();
+    		/*for (int i=0; i< issues.length; i++){    		
+    			linked.add(i, issues[i].toString());
+    		}*/
+    	Map<String, Object> issueMap = new HashMap();
+    	//List<Issue> issueList = null;
     	/**
-    	 * in dieser Schleife wird die issueMap mit denlinked Issues gefüllt
+    	 * in dieser Schleife wird die issueMap mit den linked Issues gefüllt
     	 */
-    		for(int i =0; i < linked.size(); i++){
-    			issueMap.put("linkedIssues", manager.getIssueObject(linked.get(i)));
-    		}
+    		/*for(int i =0; i < linked.size(); i++){
+    			issueList.add(i, manager.getIssueObject(linked.get(i)));
+    		}*/
+    		issueMap.put("linkedIssues", linkIssues);
     	return issueMap;
     	
     }
+    
+    
     /**
      * 
      * @param action
