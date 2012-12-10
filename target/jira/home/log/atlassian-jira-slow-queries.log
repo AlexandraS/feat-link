@@ -1,0 +1,1 @@
+2012-12-09 17:02:29,586 http-2990-4 INFO admin 1022x770x1 1wklmuy /rest/gadget/1.0/issueTable/jql [issue.search.providers.LuceneSearchProvider_SLOW] JQL query '{assignee = currentUser()} AND {resolution = "unresolved"} order by priority DESC, created ASC' produced lucene query '+issue_assignee:admin +resolution:-1' and took '515' ms to run.

@@ -9,7 +9,7 @@
   <resource type="i18n" name="i18n" location="com.capgemini.hyc.feat-link"/>
   <report name="Linked Issues" i18n-name-key="linked-issues.name" key="linked-issues" class="com.capgemini.hyc.jira.reports.LinkedIssues">
     <description key="linked-issues.description">The Linked Issues Plugin</description>
-    <resource name="html-view" type="velocity" location="templates/html-view.vm"/>
+    <resource name="html-view" type="velocity" location="html-view.vm"/>
     <resource name="excel-view" type="velocity" location="teplates.excel-view.vm"/>
     <resource name="i18n" type="i18n" location="LinkedIssues"/>
     <label key="linked-issues.label"></label>

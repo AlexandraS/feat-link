@@ -10,3 +10,15 @@
 2012-12-07 23:57:56,707 main      JIRA 5.0 build: 713 started. You can now access JIRA through your web browser.
 2012-12-08 00:12:33,105 main      JIRA 5.0 build: 713 started. You can now access JIRA through your web browser.
 2012-12-08 00:34:12,808 main      JIRA 5.0 build: 713 started. You can now access JIRA through your web browser.
+2012-12-08 11:15:06,668 main      JIRA 5.0 build: 713 started. You can now access JIRA through your web browser.
+2012-12-09 16:34:20,020 main      JIRA 5.0 build: 713 started. You can now access JIRA through your web browser.
+2012-12-09 16:42:47,945 http-2990-1 anonymous 1002x1x1 - fe80:0:0:0:244a:1482:f586:2e04 / HttpSession created [1wklmuy]
+2012-12-09 16:43:43,104 http-2990-1 anonymous 1003x273x1 1wklmuy fe80:0:0:0:244a:1482:f586:2e04 /rest/gadget/1.0/login HttpSession [1wklmuy] destroyed for 'anonymous'
+2012-12-09 16:43:43,105 http-2990-1 anonymous 1003x273x1 1wklmuy fe80:0:0:0:244a:1482:f586:2e04 /rest/gadget/1.0/login HttpSession created [1wklmuy]
+2012-12-09 16:43:43,150 http-2990-1 admin 1003x273x1 1wklmuy fe80:0:0:0:244a:1482:f586:2e04 /rest/gadget/1.0/login The user 'admin' has PASSED authentication.
+2012-12-09 17:00:50,948 main      JIRA 5.0 build: 713 started. You can now access JIRA through your web browser.
+2012-12-09 17:01:37,840 http-2990-1 anonymous 1021x1x1 - fe80:0:0:0:244a:1482:f586:2e04 / HttpSession created [1wklmuy]
+2012-12-09 17:02:14,994 http-2990-6 anonymous 1022x268x1 1wklmuy fe80:0:0:0:244a:1482:f586:2e04 /rest/gadget/1.0/login HttpSession [1wklmuy] destroyed for 'anonymous'
+2012-12-09 17:02:14,994 http-2990-6 anonymous 1022x268x1 1wklmuy fe80:0:0:0:244a:1482:f586:2e04 /rest/gadget/1.0/login HttpSession created [1wklmuy]
+2012-12-09 17:02:15,044 http-2990-6 admin 1022x268x1 1wklmuy fe80:0:0:0:244a:1482:f586:2e04 /rest/gadget/1.0/login The user 'admin' has PASSED authentication.
+2012-12-10 11:42:01,760 main      JIRA 5.0 build: 713 started. You can now access JIRA through your web browser.

@@ -1,0 +1,22 @@
+<table border="1">
+
+<tr>
+<td><b>
+IssueId
+</b></td>
+<td><b>
+Bescheibung
+<b></td>
+</tr>
+
+#foreach ($issue in $linkedIssues)
+<tr>
+<td>
+$issue.getKey()
+</td>
+<td>
+$issue.getSummary()
+</td>
+</tr>
+#end
+</table>
